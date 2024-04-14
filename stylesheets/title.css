@@ -1,0 +1,68 @@
+.canvas-container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    z-index: 2;
+}
+
+#blob canvas {
+    width: 100%;
+    height: 100vh;
+}
+
+.headline-container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+#text-behind,
+#text-front,
+#text-behind-blur {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: clamp(24px, 20vw, 200px);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 10px;
+    line-height: 0.8;
+    padding: 5px;
+}
+
+#text-behind {
+    /* color: var(--headline-color); */
+    color: rgb(0, 0, 0);
+    /* color: #fff; */
+    z-index: 2;
+}
+
+#text-behind-blur {
+    color: var(--headline-color);
+    /* color: #fff; */
+    filter: blur(7.5px);
+    -webkit-filter: blur(7.5px);
+    z-index: 1;
+}
+
+#text-front {
+    /*  Set text-color to transparent to only show the outline  */
+    color: transparent;
+    text-stroke: 2px rgb(0, 0, 0);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    z-index: 4;
+
+    /* text-stroke: 2px linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
+    -webkit-text-stroke: 2px linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent; */
+}
