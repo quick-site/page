@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="/stylesheets/orbs.css">
     <link rel="stylesheet" href="/stylesheets/plans.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
-    
+
+
+    <style>
+        body {
+            /* overflow: hidden; */
+        }
+    </style>
 </head>
 <body>
     <!-- Background Canvas -->
@@ -51,25 +57,29 @@
         <section id="plans">
             <div id="plans_triangle"></div>
 
-            <div id="app" class="container">
-                <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-                    <h1 slot="header">Canyons</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </card>
-                <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                    <h1 slot="header">Beaches</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </card>
-                <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                    <h1 slot="header">Trees</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </card>
+            <div id="plans_container">
+                <div id="app" class="container">
+                    <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+                        <h1 slot="header">Canyons</h1>
+                        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </card>
+                    <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                        <h1 slot="header">Beaches</h1>
+                        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </card>
+                    <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                        <h1 slot="header">Trees</h1>
+                        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </card>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-
+        <div id="footer_triangle"></div>
+        <div id="footer_content">
+        </div>
     </footer>
 
     <script src="/scripts/global.js"></script>

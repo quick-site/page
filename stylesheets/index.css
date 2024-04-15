@@ -1,5 +1,5 @@
 main {
-    position: absolute;
+    /* position: absolute; */
     z-index: 1;
     width: 100%;
 }
@@ -32,11 +32,36 @@ section {
 
 
 /* - - - - projects section - - - - */
+#plans_container {
+    background-color: #fff;
+}
+
 #plans_triangle {
     width: 0;
     height: 0;
     border-left: 80vw solid transparent;
     border-right: 20vw solid transparent;
-    border-bottom: 80px solid #fff;
-    margin-top: 20px;
-  }
+    border-bottom: 70px solid #fff;
+    margin-top: -70px;
+}
+
+
+/* - - - - footer - - - - */
+footer {
+    color: #fff;
+    background-image: linear-gradient(140deg, var(--base) 25%, var(--complimentary2))
+}
+
+#footer_triangle {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-left: 20vw solid #ffffff;
+    border-right: 80vw solid #ffffff;
+    margin-top: -40px;
+    transform: scaleY(-1);
+}
+
+#footer_content {
+    height: 100px
+}
