@@ -1,19 +1,10 @@
-body {
-    margin: 40px 0;
-    font-family: "Raleway";
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #bcaaa4;
-    -webkit-font-smoothing: antialiased;
-}
-
-.title {
+/* .title {
     font-family: "Raleway";
     font-size: 24px;
     font-weight: 700;
     color: #5d4037;
     text-align: center;
-}
+} */
 
 p {
     line-height: 1.5em;
@@ -25,10 +16,11 @@ p + p {
 }
 
 .container {
-    padding: 40px 80px;
+    padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 60px;
 }
 
 .card-wrap {
