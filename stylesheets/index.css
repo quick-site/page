@@ -30,3 +30,13 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+
+/* - - - - projects section - - - - */
+#plans_triangle {
+    width: 0;
+    height: 0;
+    border-left: 80vw solid transparent;
+    border-right: 20vw solid transparent;
+    border-bottom: 80px solid #fff;
+    margin-top: 20px;
+  }
