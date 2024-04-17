@@ -1,3 +1,12 @@
+:root {
+  --section-triangle-height: 70px;
+  --section-triangle-top: 80vw;
+
+  --footer-height: 100px;
+  --footer-triangle-height: 30px;
+  --footer-triangle-top: 20vw;
+}
+
 main {
   /* position: absolute; */
   z-index: 1;
@@ -9,105 +18,71 @@ section {
   width: 100%;
 }
 
-/* - - - - welcome section - - - - */
-#welcome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#welcome_div {
-  width: 100%;
-  width: 640px;
-  height: 360px;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.375);
-  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
 /* - - - - projects section - - - - */
 #plans_container {
   background-color: #fff;
 }
 
-/* #plans_triangle {
-  width: 0;
-  height: 0;
-  border-left: 80vw solid transparent;
-  border-right: 20vw solid transparent;
-  border-bottom: 70px solid #fff;
-  margin-top: -70px;
-  filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0))
-    drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.5));
-} */
-
 #plans_triangle {
   width: 0;
   height: 0;
-  border-left: 80vw solid transparent;
-  border-right: 20vw solid transparent;
-  border-bottom: 70px solid #fff;
-  margin-top: -70px;
   position: relative;
+
+  border-left: var(--section-triangle-top) solid transparent;
+  border-right: calc(100vw - var(--section-triangle-top)) solid transparent;
+  border-bottom: var(--section-triangle-height) solid #fff;
+
+  margin-top: calc(-1 * var(--section-triangle-height));
 }
 
 #plans_triangle::before {
   content: "";
   position: absolute;
+
   top: 100%;
-  left: -80vw;
+  left: calc(-1 * var(--section-triangle-top));
   width: 0;
   height: 0;
-  border-left: 80vw solid transparent;
-  border-right: 20vw solid transparent;
-  border-bottom: 70px solid #fff;
+  border-left: var(--section-triangle-top) solid transparent;
+  border-right: calc(100vw - var(--section-triangle-top)) solid transparent;
+  border-bottom: var(--section-triangle-height) solid #fff;
   filter: drop-shadow(-5px -5px 7px rgba(0, 0, 0, 0.15));
   z-index: -1;
 }
 
 /* - - - - footer - - - - */
 footer {
-  color: #fff;
+  place-self: center;
+  filter: drop-shadow(-5px -5px 8px rgba(0, 0, 0, 0.25));
+  height: calc(var(--footer-height) + var(--footer-triangle-height));
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
   background-image: linear-gradient(
     140deg,
     var(--base) 25%,
     var(--complimentary2)
   );
-  clip-path: polygon(20% 0, 100% 30%, 100% 100%, 0 100%, 0 30%);
-  /* this or with other element */
+  clip-path: polygon(
+    var(--footer-triangle-top) 0,
+    100% var(--footer-triangle-height),
+    100% 100%,
+    0 100%,
+    0 var(--footer-triangle-height)
+  );
 }
-
-#footer_triangle {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-left: 20vw solid #ffffff;
-  border-right: 80vw solid #ffffff;
-  margin-top: -40px;
-  transform: scaleY(-1);
-  display: none;
-  /* this or with clip path */
-}
-
-/* #footer_triangle::before {
-  content: "";
-  position: absolute;
-  top: -90px;
-  left: -20vw;
-  width: 0;
-  height: 0;
-  border-left: 20vw solid transparent;
-  border-right: 80vw solid transparent;
-  border-bottom: 40px solid rgba(255, 0, 0, 0.5);
-  filter: drop-shadow(-5px -50px 7px rgba(0, 0, 0, 1));
-  z-index: -10;
-  transform: scaleY(-1);
-} */
 
 #footer_content {
-  height: 100px;
+  height: var(--footer-height);
+  position: relative;
+  color: #fff;
+
+  display: flex;
+  padding-top: var(--footer-triangle-height);
+
+  z-index: 1;
 }
