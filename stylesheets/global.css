@@ -1,11 +1,11 @@
 :root {
-    --c-text: rgba(22, 3, 24);
-    --c-background: #ffffff;
-    --c-primary: #7c0283;
-    --c-secondary: #460349;
-    --c-accent: #98161B;
+  --c-text: rgba(22, 3, 24);
+  --c-background: #ffffff;
+  --c-primary: #7c0283;
+  --c-secondary: #460349;
+  --c-accent: #98161b;
 
-    /* --c-text: #ffffff;
+  /* --c-text: #ffffff;
     --c-background: #011426;
     --c-primary: #066ACF;
     --c-secondary: #032B54;
@@ -13,33 +13,33 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    color: var(--c-text);
-    background-color: var(--c-background);
+  color: var(--c-text);
+  background-color: var(--c-background);
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    overflow-x: hidden;
-    overscroll-behavior: none;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 img {
-    user-drag: none;
-    /* Standard */
-    -webkit-user-drag: none;
-    /* Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    pointer-events: none;
-    /* Prevent pointer events */
+  user-drag: none;
+  /* Standard */
+  -webkit-user-drag: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  pointer-events: none;
+  /* Prevent pointer events */
 }

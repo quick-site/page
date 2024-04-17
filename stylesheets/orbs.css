@@ -1,30 +1,31 @@
 :root {
-    --dark-color: hsl(var(--hue), 100%, 9%);
-    --light-color: hsl(var(--hue), 95%, 98%);
-    --base: hsl(var(--hue), 95%, 50%);
-    --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
-    --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+  --dark-color: hsl(var(--hue), 100%, 9%);
+  --light-color: hsl(var(--hue), 95%, 98%);
+  --base: hsl(var(--hue), 95%, 50%);
+  --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
 
-    --font-family: "Poppins", system-ui;
+  --font-family: "Poppins", system-ui;
 
-    --bg-gradient: linear-gradient(to bottom,
-            hsl(var(--hue), 95%, 99%),
-            hsl(var(--hue), 95%, 84%),
-            hsl(var(--hue), 95%, 84%),
-            hsl(var(--hue), 95%, 99%));
+  --bg-gradient: linear-gradient(
+    to bottom,
+    hsl(var(--hue), 95%, 99%),
+    hsl(var(--hue), 95%, 84%),
+    hsl(var(--hue), 95%, 84%),
+    hsl(var(--hue), 95%, 99%)
+  );
 }
 
-
 .orb-canvas {
-    position: absolute;
-    top: -10vh;
-    left: -10%;
-    width: 220%;
-    height: 220vh;
-    pointer-events: none;
-    z-index: -1;
+  position: absolute;
+  top: -10vh;
+  left: -10%;
+  width: 220%;
+  height: 220vh;
+  pointer-events: none;
+  z-index: -1;
 
-    background: var(--bg-gradient);
+  background: var(--bg-gradient);
 }
 
 /* .overlay {
@@ -40,9 +41,13 @@
 } */
 
 .gradient-text {
-    background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    var(--base) 25%,
+    var(--complimentary2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
