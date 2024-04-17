@@ -52,7 +52,7 @@ class ColorPalette {
     this.colorChoices = [
       this.baseColor,
       this.complimentaryColor1,
-      this.complimentaryColor2
+      this.complimentaryColor2,
     ];
   }
 
@@ -96,7 +96,7 @@ class Orb {
 
     // the original radius of the orb, set relative to window height
     this.radius = random(window.innerHeight / 6, window.innerHeight / 3);
-    this.radius = this.radius/1.8;
+    this.radius = this.radius / 1.8;
 
     // starting points in "time" for the noise/self similar random values
     this.xOff = random(0, 1000);
@@ -119,29 +119,28 @@ class Orb {
 
   setBounds() {
     // Calculate the center of the canvas
-    const centerX = (window.innerWidth / 2.3);
+    const centerX = window.innerWidth / 2.3;
     const centerY = window.innerHeight / 2;
 
     // Set the maximum distance from the center for the orbs to move
     const maxDist =
-        window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
+      window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
 
     // Adjust the maxDist to accommodate the larger canvas size (200vh)
     const adjustedMaxDist = maxDist / 1.5;
 
     // Allow each orb to move within a square centered at the canvas center
     return {
-        x: {
-            min: centerX - adjustedMaxDist,
-            max: centerX + adjustedMaxDist
-        },
-        y: {
-            min: centerY - adjustedMaxDist,
-            max: centerY + adjustedMaxDist
-        }
+      x: {
+        min: centerX - adjustedMaxDist,
+        max: centerX + adjustedMaxDist,
+      },
+      y: {
+        min: centerY - adjustedMaxDist,
+        max: centerY + adjustedMaxDist,
+      },
     };
   }
-
 
   update() {
     // self similar "psuedo-random" or noise values at a given point in "time"
@@ -185,7 +184,7 @@ const app = new PIXI.Application({
   // auto adjust size to fit the current window
   resizeTo: window,
   // transparent background, we will be creating a gradient background later using CSS
-  transparent: true
+  transparent: true,
 });
 
 app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
