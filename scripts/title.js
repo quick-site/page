@@ -3,7 +3,7 @@ $(document).ready(function () {
   const morphSpeedValue = 75;
   const processingValue = 0.8;
   const spikesValue = 0.8;
-  const sphereRadiusValue = $("#text-behind").width() * 0.0007;
+  let sphereRadiusValue = $("#text-behind").width() * 0.0007;
 
   let $canvas = $("#blob canvas"),
     canvas = $canvas[0],
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   let material = new THREE.MeshPhongMaterial({
     color: 0xe4ecfa,
-    shininess: 100,
+    shininess: 50,
   });
 
   let lightTop = new THREE.DirectionalLight(0xffffff, 0.7);
@@ -53,8 +53,8 @@ $(document).ready(function () {
   scene.add(sphere);
 
   let update = () => {
+    sphereRadiusValue = $("#text-behind").width() * 0.0007;
     sphere.rotation.y += rotationSpeedValue;
-    // camera.position.set(0, 0, 0);
     let time =
         performance.now() *
         0.00001 *

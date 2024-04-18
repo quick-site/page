@@ -92,5 +92,5 @@ footer::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10%;
+  gap: 15%;
 }
