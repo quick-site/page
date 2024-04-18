@@ -38,31 +38,12 @@
 }
 
 #text-behind {
-  /* color: var(--headline-color); */
-  color: rgb(0, 0, 0);
-  /* color: #fff; */
   z-index: 2;
 }
 
-#text-behind-blur {
-  color: var(--headline-color);
-  /* color: #fff; */
-  filter: blur(7.5px);
-  -webkit-filter: blur(7.5px);
-  z-index: 1;
-}
-
 #text-front {
-  /*  Set text-color to transparent to only show the outline  */
   color: transparent;
-  text-stroke: 2px rgb(0, 0, 0);
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  text-stroke: 2px var(--c-text);
+  -webkit-text-stroke: 2px var(--c-text);
   z-index: 4;
-
-  /* text-stroke: 2px linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
-    -webkit-text-stroke: 2px linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent; */
 }

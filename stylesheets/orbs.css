@@ -5,8 +5,6 @@
   --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
   --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
 
-  --font-family: "Poppins", system-ui;
-
   --bg-gradient: linear-gradient(
     to bottom,
     hsl(var(--hue), 95%, 99%),

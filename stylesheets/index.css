@@ -82,7 +82,15 @@ footer::before {
   color: #fff;
 
   display: flex;
-  padding-top: var(--footer-triangle-height);
+  justify-content: space-between;
 
   z-index: 1;
+  padding: var(--footer-triangle-height) 20px 0 20px;
+}
+
+#footer_container_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
 }

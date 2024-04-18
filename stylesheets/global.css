@@ -1,9 +1,11 @@
 :root {
-  --c-text: rgba(22, 3, 24);
+  --c-text: rgb(0, 0, 0);
   --c-background: #ffffff;
   --c-primary: #7c0283;
   --c-secondary: #460349;
   --c-accent: #98161b;
+
+  --font-family: "Playfair Display";
 
   /* --c-text: #ffffff;
     --c-background: #011426;
@@ -42,4 +44,37 @@ img {
   /* Internet Explorer/Edge */
   pointer-events: none;
   /* Prevent pointer events */
+}
+
+/* a tags */
+a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--c-background);
+  opacity: 0.6;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%; /* Initially hidden */
+  height: 1px;
+  background-color: var(--c-background);
+  transition: width 0.3s;
+}
+
+a:hover::after {
+  width: 100%; /* Fill the black line on hover */
 }
