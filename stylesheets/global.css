@@ -5,7 +5,7 @@
   --c-secondary: #460349;
   --c-accent: #98161b;
 
-  --font-family: "Playfair Display";
+  --font-family: "Work Sans", sans-serif;
 
   /* --c-text: #ffffff;
     --c-background: #011426;
@@ -29,6 +29,9 @@ body {
 
   overflow-x: hidden;
   overscroll-behavior: none;
+
+  font-family: var(--font-family);
+  font-style: normal;
 }
 
 img {
@@ -76,5 +79,5 @@ a::after {
 }
 
 a:hover::after {
-  width: 100%; /* Fill the black line on hover */
+  width: 100%; /* Fill line on hover */
 }
