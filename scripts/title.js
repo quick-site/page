@@ -77,6 +77,7 @@ $(document).ready(function () {
     sphere.geometry.verticesNeedUpdate = true;
   };
 
+  // Animate!
   function animate() {
     update();
     renderer.render(scene, camera);

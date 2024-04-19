@@ -204,16 +204,13 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Animate!
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  app.ticker.add(() => {
-    orbs.forEach((orb) => {
-      orb.update();
-      orb.render();
-    });
-  });
-} else {
+function animate() {
   orbs.forEach((orb) => {
     orb.update();
     orb.render();
   });
+
+  requestAnimationFrame(animate);
 }
+
+requestAnimationFrame(animate);
