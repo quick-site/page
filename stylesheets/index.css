@@ -54,6 +54,11 @@ section {
 }
 
 /* - - - - projects section - - - - */
+#plans {
+  position: relative; /* needed for image trail */
+  z-index: 2; /* needed for image trail */
+}
+
 #plans_container {
   background-color: #fff;
 }
