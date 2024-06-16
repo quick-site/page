@@ -90,51 +90,6 @@ section {
   z-index: -1;
 }
 
-/* - - - - footer - - - - */
-footer {
-  place-self: center;
-  filter: drop-shadow(-5px -5px 8px rgba(0, 0, 0, 0.25));
-  height: calc(var(--footer-height) + var(--footer-triangle-height));
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image: linear-gradient(
-    140deg,
-    var(--base) 25%,
-    var(--complimentary2)
-  );
-  clip-path: polygon(
-    var(--footer-triangle-top) 0,
-    100% var(--footer-triangle-height),
-    100% 100%,
-    0 100%,
-    0 var(--footer-triangle-height)
-  );
-}
-
-#footer_content {
-  height: var(--footer-height);
-  position: relative;
-  color: #fff;
-
-  display: flex;
-  justify-content: space-between;
-
-  z-index: 1;
-  padding: var(--footer-triangle-height) 20px 0 20px;
-}
-
-#footer_container_left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15%;
-}
-
 /* temp */
 #startKontakt {
   position: absolute;
