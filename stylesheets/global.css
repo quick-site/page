@@ -34,6 +34,19 @@ body {
   font-style: normal;
 }
 
+noscript {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
 /* img tags */
 img {
   user-drag: none;
